@@ -14,7 +14,7 @@ class String
       if ignored_words.include?(word) && word.!=(split_sentence[0])
         final_case.push(word)
       else
-        final_case.push(word.capitalize!())
+        final_case.push(word.capitalize())
       end
     end
     final_case.join(" ")

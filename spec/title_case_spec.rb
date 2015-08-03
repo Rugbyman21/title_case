@@ -16,7 +16,11 @@ describe('String#title_case') do
   end
 
   it('manages all uppercase entries and mixed case entries') do
-    expect(('BEOWULF ON THE ROCKS').title_case()).to(eq("Beowulf on the Rocks"))
+    expect(('BEOWuLF ON THE ROCKS').title_case()).to(eq("Beowulf on the Rocks"))
+  end
+
+  it('handles all non-letter characters') do
+    expect(('BEOWuLF ON THE ROCKS').title_case()).to(eq("Beowulf on the Rocks"))
   end
 
 end
